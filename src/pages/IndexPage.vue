@@ -8,6 +8,7 @@
 					<FilterAndSearch />
 				</div>
 			</div>
+			<q-separator class="bg-purple-10 q-mt-md"></q-separator>
 			<ProjectList />
 		</div>
 	</q-page>
