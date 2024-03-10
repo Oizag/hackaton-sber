@@ -3,9 +3,12 @@
 		<div class="pageSize flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
 			<div class="flex row justify-between items-center">
 				<h2 class="text-h4">Проекты</h2>
-				<FilterAndSearch />
+				<div class="flex justify-end">
+					<ModalWindowJSON />
+					<FilterAndSearch />
+				</div>
 			</div>
-			<ProjectPanelVue />
+			<ProjectPanelVue v-for="" />
 			<q-pagination
 				class="self-center q-mt-lg"
 				v-model="current"
@@ -23,8 +26,9 @@
 	lang="ts"
 >
 import { ref } from 'vue'
-import FilterAndSearch from '../components/FilterAndSearch.vue';
-import ProjectPanelVue from '../components/ProjectPanel.vue';
+import FilterAndSearch from '../components/FilterAndSearch.vue'
+import ProjectPanelVue from '../components/ProjectPanel.vue'
+import ModalWindowJSON from '../components/ModalWindowJSON.vue'
 
 const current = ref(1)
 </script>
