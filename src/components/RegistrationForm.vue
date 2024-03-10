@@ -1,7 +1,7 @@
 <template>
 
 	<div class="flex justify-center">
-		<q-form class=" loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-xl">
+		<q-form class=" loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-lg">
 			<h2 class="text-white text-center text-h3">Регистрация</h2>
 			<q-input
 				v-model="textRegistrationEmail"

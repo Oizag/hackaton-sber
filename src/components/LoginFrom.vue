@@ -1,6 +1,6 @@
 <template>
 	<div class="flex justify-center">
-		<q-form class="loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-xl">
+		<q-form class="loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-lg">
 			<h2 class="text-white text-center text-h3">Вход</h2>
 			<q-input
 				v-model="textLoginEmail"
@@ -35,6 +35,7 @@
 				>Забыли пароль?</router-link>
 			</div>
 			<q-btn
+				rounded
 				color="purple-10"
 				text-color="white"
 				label="Войти"
@@ -46,6 +47,7 @@
 			/>
 			<span class="text-center text-white q-mt-sm">или</span>
 			<q-btn
+				rounded
 				color="white"
 				text-color="purple-10"
 				label="Зарегистрироваться"

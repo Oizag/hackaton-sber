@@ -7,6 +7,7 @@
 		<q-page-container class="q-ma-lg">
 			<router-view />
 		</q-page-container>
+		<Footer />
 	</q-layout>
 </template>
 
@@ -17,4 +18,5 @@
 >
 
 import Header from '../components/HeaderComponent.vue'
+import Footer from '../components/FooterComponent.vue'
 </script>
