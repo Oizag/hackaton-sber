@@ -1,1 +1,27 @@
 @charset 'UTF-8';
+
+.loginSize {
+  max-width: 1000px;
+  width: auto;
+}
+
+.registrationBtnSize {
+  width: 280px;
+}
+.loginBtnSize {
+  width: 180px;
+}
+
+.loginConditionsSize {
+  max-width: 420px;
+}
+
+.rounded-24 {
+  border-radius: 24px;
+}
+.dotSize {
+  height: 1.8rem;
+  width: 1.8rem;
+  min-height: 1.8rem;
+  min-width: 1.8rem;
+}

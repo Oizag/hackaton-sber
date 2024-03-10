@@ -1,8 +1,8 @@
 <template>
-  <img
-    height="60"
-    src="~images/rsue_logo.svg"
-  />
+	<div></div>
 </template>
 
-<script setup lang="ts"></script>
+<script
+	setup
+	lang="ts"
+></script>

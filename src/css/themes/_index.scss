@@ -1,3 +1,20 @@
 @charset 'UTF-8';
 
 @import 'default';
+
+.main-background {
+  background-color: #292929;
+}
+
+.bg-main-dark {
+  background-color: #1a1a1a;
+}
+.panel-shadow {
+  transition: 0.4s;
+  &:hover {
+    box-shadow: 0 0 20px #4a148c;
+  }
+  &:active {
+    transform: scale(1.02);
+  }
+}
