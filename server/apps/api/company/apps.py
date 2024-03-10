@@ -2,11 +2,11 @@ from django.apps import AppConfig
 from django.utils.translation import gettext_lazy as _
 
 
-class HomeConfig(AppConfig):
+class CompanyConfig(AppConfig):
     """Default app config"""
 
-    name = "apps.api.home"
-    verbose_name = _("Home")
+    name = "apps.api.company"
+    verbose_name = _("Company")
 
     def ready(self):
         from . import signals  # noqa: F401 # pylint: disable=unused-import

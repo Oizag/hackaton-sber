@@ -27,8 +27,7 @@ PROJECT_APPS = [
     "apps.core.main",
     "apps.core.api",
     "apps.api.auth",
-    "apps.api.home",
-    "apps.api.employee_info",
+    "apps.api.company",
 ]
 
 DEVELOPER_APPS = [
