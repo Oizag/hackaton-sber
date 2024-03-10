@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
 from .employee_role import Role
+from ...tasks.models.task import Task
 
 
 class Employee(models.Model):
@@ -40,6 +41,7 @@ class Employee(models.Model):
         default=0,
         verbose_name="Загруженность работника",
     )
+
 
     reservation_status = models.CharField(
         max_length=3,
