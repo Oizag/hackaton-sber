@@ -7,6 +7,7 @@
 				v-model="textRegistrationEmail"
 				autofocus
 				outlined
+				rounded
 				dark
 				label="Почта"
 				color="purple-10"
@@ -16,6 +17,7 @@
 			<q-input
 				v-model="textRegistrationPassword"
 				outlined
+				rounded
 				dark
 				label="Пароль"
 				color="purple-10"
@@ -25,6 +27,7 @@
 			<q-input
 				v-model="textRegistrationPasswordRepeat"
 				outlined
+				rounded
 				dark
 				label="Повторите пароль"
 				color="purple-10"
