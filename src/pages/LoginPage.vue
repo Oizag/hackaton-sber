@@ -9,7 +9,7 @@
 	setup
 	lang="ts"
 >
-import Login from '../components/LoginFrom.vue'
+import Login from '../components/LoginForm.vue'
 import Registration from '../components/RegistrationForm.vue'
 import { useAuthStore } from 'src/stores/auth'
 

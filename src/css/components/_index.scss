@@ -1,10 +1,10 @@
 @charset 'UTF-8';
 
-@import "login";
-@import "registration";
-@import "project-panel";
-@import "footer";
-@import "modal";
+@import 'login';
+@import 'registration';
+@import 'project-list';
+@import 'footer';
+@import 'modal';
 
 .rounded-24 {
   border-radius: 24px;

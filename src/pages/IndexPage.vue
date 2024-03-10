@@ -8,15 +8,7 @@
 					<FilterAndSearch />
 				</div>
 			</div>
-			<ProjectPanelVue />
-			<q-pagination
-				class="self-center q-mt-lg"
-				v-model="current"
-				color="purple-10"
-				:max="10"
-				:max-pages="6"
-				boundary-numbers
-			/>
+			<ProjectList />
 		</div>
 	</q-page>
 </template>
@@ -25,10 +17,8 @@
 	setup
 	lang="ts"
 >
-import { ref } from 'vue'
 import FilterAndSearch from '../components/FilterAndSearch.vue'
-import ProjectPanelVue from '../components/ProjectPanel.vue'
-import ModalWindowJSON from '../components/ModalWindowJSON.vue'
+import ProjectList from '../components/ProjectList.vue'
+import ModalWindowJSON from '../components/ModalUpload.vue'
 
-const current = ref(1)
 </script>
