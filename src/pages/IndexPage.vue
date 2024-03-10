@@ -8,7 +8,7 @@
 					<FilterAndSearch />
 				</div>
 			</div>
-			<ProjectPanelVue v-for="" />
+			<ProjectPanelVue />
 			<q-pagination
 				class="self-center q-mt-lg"
 				v-model="current"
