@@ -3,15 +3,17 @@
 		<q-select
 			dark
 			outlined
+			rounded
 			v-model="model"
 			:options="options"
 			label="Фильтр"
 			color="purple-10"
-			style="width: 200px;"
+			class="selectSize"
 		/>
 		<q-input
 			dark
 			outlined
+			rounded
 			v-model="text"
 			label="Поиск"
 			color="purple-10"

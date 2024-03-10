@@ -1,5 +1,5 @@
 <template>
-	<q-page class="row items-center justify-evenly">
+	<q-page class="row items-start justify-evenly">
 		<Login v-if="authStore.isLoginForm" />
 		<Registration v-else />
 	</q-page>

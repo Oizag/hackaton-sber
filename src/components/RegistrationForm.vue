@@ -1,12 +1,13 @@
 <template>
 
 	<div class="flex justify-center">
-		<q-form class=" loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-xl">
+		<q-form class=" loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-lg">
 			<h2 class="text-white text-center text-h3">Регистрация</h2>
 			<q-input
 				v-model="textRegistrationEmail"
 				autofocus
 				outlined
+				rounded
 				dark
 				label="Почта"
 				color="purple-10"
@@ -16,6 +17,7 @@
 			<q-input
 				v-model="textRegistrationPassword"
 				outlined
+				rounded
 				dark
 				label="Пароль"
 				color="purple-10"
@@ -25,6 +27,7 @@
 			<q-input
 				v-model="textRegistrationPasswordRepeat"
 				outlined
+				rounded
 				dark
 				label="Повторите пароль"
 				color="purple-10"
