@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from ...employees.models.employee_detail import Employee
+from apps.api.employees.models.employee import Employee
 
 
 class Project(models.Model):
@@ -22,8 +22,8 @@ class Project(models.Model):
 
     cost = models.DecimalField(
         default=0,
-        max_digits=11, 
-        decimal_places=2, 
+        max_digits=11,
+        decimal_places=2,
         verbose_name="Стоиомсть"
     )
 
@@ -36,19 +36,19 @@ class Project(models.Model):
     )
 
     last_modify_date = models.DateTimeField(
-        auto_now=True, 
+        auto_now=True,
         verbose_name="Дата последнего изменения"
     )
 
     progress = models.DecimalField(
-        default=0, 
-        max_digits=4, 
-        decimal_places=2, 
+        default=0,
+        max_digits=4,
+        decimal_places=2,
         verbose_name="прогресс"
     )
 
     start_date = models.DateField(
-        auto_now_add=True, 
+        auto_now_add=True,
         verbose_name="Дата начала"
     )
 

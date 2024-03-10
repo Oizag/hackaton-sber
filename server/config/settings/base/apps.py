@@ -29,7 +29,6 @@ PROJECT_APPS = [
     "apps.api.auth",
     "apps.api.company",
     "apps.api.employees",
-    "apps.api.tasks",
 ]
 
 DEVELOPER_APPS = [

@@ -1,2 +1,1 @@
-from .employee_detail import Employee
-from .employee_role import Role
+from .employee import Employee

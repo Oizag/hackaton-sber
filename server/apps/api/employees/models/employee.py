@@ -1,10 +1,13 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from .employee_role import Role
-from ...tasks.models.task import Task
-
 
 class Employee(models.Model):
+
+    class Role(models.TextChoices):
+      DEVELOPER = "DL", "Разработчик"
+      ANALYST = "AL", "Аналитик"
+      TESTER = "TT", "Тестировщик"
+
     class Status(models.TextChoices):
         CONFIRMED = "CF", "Принят"
         UNCONFIRMED = "UCF", "Не принят"
@@ -30,8 +33,8 @@ class Employee(models.Model):
     )
 
     project_role = models.CharField(
-        max_length=3, 
-        choices=Role.choices, 
+        max_length=3,
+        choices=Role.choices,
         verbose_name="Должноcть"
     )
 
@@ -51,7 +54,7 @@ class Employee(models.Model):
     )
 
     class Meta:
-        verbose_name = "Работника"
+        verbose_name = "Работник"
         verbose_name_plural = "Работники"
 
     def __str__(self) -> str:
