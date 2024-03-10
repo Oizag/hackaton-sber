@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from apps.api.company.models import Project
+from apps.api.employees.models import Employee
 
 
 # Create your serializers here.
 class Meta:
-    model = Project
+    model = Employee
     fields = "__all__"
