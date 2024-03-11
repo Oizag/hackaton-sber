@@ -2,8 +2,8 @@
 	<q-btn
 		label="Добавить JSON"
 		color="purple-10"
-		class="q-mr-md"
 		rounded
+		class="page-btn-size"
 		@click="modalWindowJSON = true"
 	/>
 	<q-dialog v-model="modalWindowJSON">
@@ -36,5 +36,5 @@
 >
 import { ref } from 'vue';
 
-const modalWindowJSON = ref(false)
+const modalWindowJSON = ref<boolean>(false)
 </script>

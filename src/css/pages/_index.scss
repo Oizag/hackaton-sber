@@ -1,6 +1,29 @@
 @charset 'UTF-8';
+@import 'project';
 
-.pageSize {
+.page-size {
   width: 1366px;
   height: auto;
+}
+@media screen and (max-width: 800px) {
+  .page-buttons-wrap {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.page-btn-size {
+  height: 56px;
+  max-width: 200px;
+  width: 100%;
+}
+
+.filter-size {
+  max-width: 400px;
+  width: 100%;
+}
+
+.search-size {
+  max-width: 650px;
+  width: 100%;
 }
