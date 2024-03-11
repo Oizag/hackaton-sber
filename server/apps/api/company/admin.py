@@ -1,5 +1,8 @@
 from django.contrib import admin
-from .models.project import Project
+from .models import (
+  Project,
+  Task
+)
 
 
 # Register your models here.
@@ -14,3 +17,14 @@ class AdminProject(admin.ModelAdmin):
         "status",
     ]
     prepopulated_fields = {"slug": ("name",)}
+
+@admin.register(Task)
+class AdminTask(admin.ModelAdmin):
+    list_display = [
+      "title",
+      "descripion",
+      "task_start",
+      "task_end",
+      "status",
+      "project"
+    ]

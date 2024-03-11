@@ -1,8 +1,18 @@
 from rest_framework import serializers
-from apps.api.company.models import Project
+from apps.api.company.models import (
+  Project,
+  Task
+  )
 
+class ProjectAPI(serializers.ModelSerializer):
 
-# Create your serializers here.
-class Meta:
-    model = Project
-    fields = "__all__"
+    class Meta:
+      model = Project
+      fields = "__all__"
+
+class ProjectTasksAPI(serializers.ModelSerializer):
+
+    class Meta:
+      model = Task
+      fields = "__all__"
+

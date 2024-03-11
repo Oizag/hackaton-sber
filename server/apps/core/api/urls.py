@@ -17,6 +17,4 @@ urlpatterns = [
     ),
     path("redoc/", RedocView().as_view()),
     path("v1/", include("apps.core.api.v1")),
-    path("", include("apps.api.company.v1")),
-    path("employees/", include("apps.api.employees.v1")),
 ]

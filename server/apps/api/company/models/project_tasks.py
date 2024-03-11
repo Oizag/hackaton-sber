@@ -1,5 +1,5 @@
 from django.db import models
-from models.project import Project
+from apps.api.company.models import Project
 
 class Task(models.Model):
 
