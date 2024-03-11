@@ -27,14 +27,18 @@
 	setup
 	lang="ts"
 >
+import { useDataStore } from 'src/stores/data'
 import { ref } from 'vue';
+
+const dataStore = useDataStore()
+
 const items = ref([
-	{ title: 'Количество человек', description: 200 },
-	{ title: 'Стоимость', description: 1200 },
-	{ title: 'Прогресс', description: 50 },
-	{ title: 'Последнее изменение', description: 'Игорь Николаевич - Frontend' },
-	{ title: 'Срок сдачи', description: '25.01.2024' },
-	{ title: 'Оценка перспективности', description: 'Не перспективный' },
-	{ title: 'Стадия разработки', description: 'Аналитика' },
+	{ title: 'Количество человек', description: dataStore[0].amountOfPeople },
+	{ title: 'Стоимость', description: dataStore[0].price },
+	{ title: 'Прогресс', description: dataStore[0].progress },
+	{ title: 'Последнее изменение', description: dataStore[0].lastChange },
+	{ title: 'Срок сдачи', description: dataStore[0].dueDate },
+	{ title: 'Оценка перспективности', description: dataStore[0].condition },
+	{ title: 'Стадия разработки', description: dataStore[0].developmentStage },
 ])
 </script>

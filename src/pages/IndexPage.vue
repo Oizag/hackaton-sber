@@ -1,7 +1,7 @@
 <template>
 	<q-page class="row items-start justify-evenly text-white">
 		<div class="page-size flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
-			<h2 class="text-h4 text-center q-mt-sm">Проекты</h2>
+			<h3 class="text-center q-mt-sm">Проекты</h3>
 			<div class="page-buttons-wrap flex row justify-between no-wrap q-gutter-md q-my-sm">
 				<ModalUpload />
 				<FilterField />

@@ -77,7 +77,6 @@ import { useAuthStore } from 'src/stores/auth'
 
 const authStore = useAuthStore()
 
-// во первых у тебя тайпскрипт для того, что делать статическую типизацию. например:
 const rememberThePassword = ref<boolean>(true)
 const textLoginEmail = ref<string>('')
 const textLoginPassword = ref<string>('')
