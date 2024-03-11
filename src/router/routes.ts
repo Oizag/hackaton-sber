@@ -27,6 +27,17 @@ const routes: RouteRecordRaw[] = [
 			},
 		],
 	},
+	{
+		path: '/project',
+		component: () => import('layouts/MainLayout.vue'),
+		children: [
+			{
+				path: '',
+				name: 'ProjectPage',
+				component: () => import('pages/ProjectPage.vue'),
+			},
+		],
+	},
 ];
 
 export default routes;

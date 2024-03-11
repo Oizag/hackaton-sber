@@ -1,14 +1,12 @@
 <template>
 	<q-page class="row items-start justify-evenly text-white">
-		<div class="pageSize flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
-			<div class="flex row justify-between items-center">
-				<h2 class="text-h4">Проекты</h2>
-				<div class="flex justify-end">
-					<ModalWindowJSON />
-					<FilterAndSearch />
-				</div>
+		<div class="page-size flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
+			<h2 class="text-h4 text-center q-mt-sm">Проекты</h2>
+			<div class="page-buttons-wrap flex row justify-between no-wrap q-gutter-md q-my-sm">
+				<ModalUpload />
+				<FilterField />
+				<SearchField />
 			</div>
-			<q-separator class="bg-purple-10 q-mt-md"></q-separator>
 			<ProjectList />
 		</div>
 	</q-page>
@@ -18,8 +16,9 @@
 	setup
 	lang="ts"
 >
-import FilterAndSearch from '../components/FilterAndSearch.vue'
+import SearchField from '../components/SearchField.vue'
+import FilterField from '../components/FilterField.vue'
 import ProjectList from '../components/ProjectList.vue'
-import ModalWindowJSON from '../components/ModalUpload.vue'
+import ModalUpload from '../components/ModalUpload.vue'
 
 </script>

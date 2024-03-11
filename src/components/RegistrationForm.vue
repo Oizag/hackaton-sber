@@ -13,6 +13,7 @@
 				color="purple-10"
 				class="text-h6 q-mt-lg"
 				type="email"
+				:rules="[val => val && val.length > 0 || 'Пожалуйста, введите свою почту!']"
 			/>
 			<q-input
 				v-model="textRegistrationPassword"
@@ -23,6 +24,7 @@
 				color="purple-10"
 				class="text-h6 q-mt-lg"
 				type="password"
+				:rules="[val => val && val.length > 0 || 'Пожалуйста, введите свой пароль!']"
 			/>
 			<q-input
 				v-model="textRegistrationPasswordRepeat"
@@ -33,6 +35,7 @@
 				color="purple-10"
 				class="text-h6 q-mt-lg"
 				type="password"
+				:rules="[val => val && val.length > 0 || 'Пожалуйста, введите свой пароль!']"
 			/>
 			<div class="flex row items-center justify-between q-gutter-x-xl q-mt-md">
 				<q-checkbox
@@ -80,10 +83,10 @@ import { useAuthStore } from 'src/stores/auth'
 
 const authStore = useAuthStore()
 
-const rememberThePassword = ref(true)
-const textRegistrationEmail = ref('')
-const textRegistrationPassword = ref('')
-const textRegistrationPasswordRepeat = ref('')
+const rememberThePassword = ref<boolean>(true)
+const textRegistrationEmail = ref<string>('')
+const textRegistrationPassword = ref<string>('')
+const textRegistrationPasswordRepeat = ref<string>('')
 
 
 
