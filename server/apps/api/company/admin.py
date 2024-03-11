@@ -11,6 +11,7 @@ class AdminProject(admin.ModelAdmin):
     list_display = [
         "name",
         "cost",
+        "perspective",
         "progress",
         "start_date",
         "deadline_date",

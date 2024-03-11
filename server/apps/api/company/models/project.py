@@ -1,3 +1,4 @@
+from email.policy import default
 from django.db import models
 from django.contrib.auth import get_user_model
 from apps.api.employees.models.employee import Employee
@@ -9,6 +10,11 @@ class Project(models.Model):
         DEVELOPMENT = "DP", "Разработка"
         TESTING = "TT", "Тестирование"
         COMPLETED = "CL", "Завершен"
+
+    class Perspective(models.TextChoices):
+        BAD = "BAD", "Неперспективный"
+        NEUTRAL = "NL", "Нейтральный"
+        GOOD = "GD", "Перспективный"
 
     name = models.CharField(
         max_length=250,
@@ -25,6 +31,13 @@ class Project(models.Model):
         max_digits=11,
         decimal_places=2,
         verbose_name="Стоиомсть"
+    )
+
+    perspective = models.CharField(
+        max_length=3,
+        choices=Perspective.choices,
+        default=Perspective.NEUTRAL,
+        verbose_name="Перспективность"
     )
 
     last_modify_user = models.ForeignKey(
