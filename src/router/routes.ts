@@ -38,6 +38,17 @@ const routes: RouteRecordRaw[] = [
 			},
 		],
 	},
+	{
+		path: '/profile',
+		component: () => import('layouts/MainLayout.vue'),
+		children: [
+			{
+				path: '',
+				name: 'ProfilePage',
+				component: () => import('pages/ProfilePage.vue'),
+			},
+		],
+	},
 ];
 
 export default routes;

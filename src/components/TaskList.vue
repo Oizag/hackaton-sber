@@ -61,7 +61,6 @@ onMounted(async () => {
 	try {
 		const { data } = await getTaskList()
 		items.value = data
-		console.log(data)
 	} catch (err) {
 		console.log(err)
 	}

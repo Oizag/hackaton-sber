@@ -64,7 +64,6 @@ onMounted(async () => {
 	try {
 		const { data } = await getProjectList()
 		items.value = data
-		console.log(data)
 	} catch (err) {
 		console.log(err)
 	}

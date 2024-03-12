@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @import 'project';
+@import 'profile';
 
 .page-size {
   width: 1366px;
@@ -26,4 +27,14 @@
 .search-size {
   max-width: 650px;
   width: 100%;
+}
+
+.button-back {
+  margin-left: -30px;
+}
+@media screen and (max-width: 420px) {
+  .button-back {
+    width: 100%;
+    margin-left: 0px;
+  }
 }

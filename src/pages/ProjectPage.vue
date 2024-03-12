@@ -1,12 +1,12 @@
 <template>
 	<q-page class="row items-start justify-evenly text-white">
-		<div class="page-size flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
+		<div class="page-size flex column q-my-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
 			<div>
 				<q-btn
 					rounded
 					flat
 					to="/"
-					class="btn-back absolute"
+					class="q-mb-md button-back"
 				>
 					<q-img
 						class="arrow-size"
@@ -40,7 +40,6 @@ import SearchField from '../components/SearchField.vue'
 import FilterField from '../components/FilterField.vue'
 import TaskList from '../components/TaskList.vue'
 import ProjectStatistic from '../components/ProjectStatistic.vue'
-import { useDataStore } from 'src/stores/data'
 import ArrowLeft from '../assets/images/arrow-left.svg'
 
 </script>

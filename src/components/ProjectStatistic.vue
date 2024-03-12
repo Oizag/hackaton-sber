@@ -1,5 +1,5 @@
 <template>
-	<h3 class="q-mx-auto">{{ projectObject.name }}</h3>
+	<h3 class="q-mx-auto q-mb-sm">{{ projectObject.name }}</h3>
 	<div class="flex row justify-center q-gutter-md q-my-md">
 		<q-field
 			rounded
@@ -8,14 +8,10 @@
 			label="Количество человек"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.job }}</div>
+				<p class="text-subtitle1">{{ projectObject.job }}</p>
 			</template>
 		</q-field>
 		<q-field
@@ -25,14 +21,10 @@
 			label="Стоимость"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.cost }} руб.</div>
+				<p class="text-subtitle1">{{ projectObject.cost }} руб.</p>
 			</template>
 		</q-field>
 		<q-field
@@ -42,14 +34,10 @@
 			label="Прогресс"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.progress }} %</div>
+				<p class="text-subtitle1">{{ projectObject.progress }} %</p>
 			</template>
 		</q-field>
 		<q-field
@@ -59,14 +47,10 @@
 			label="Последнее изменение"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.lastModifyUser }}</div>
+				<p class="text-subtitle1">{{ projectObject.lastModifyUser }}</p>
 			</template>
 		</q-field>
 		<q-field
@@ -76,14 +60,10 @@
 			label="Срок сдачи"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.lastModifyDate }}</div>
+				<p class="text-subtitle1">{{ projectObject.lastModifyDate }}</p>
 			</template>
 		</q-field>
 		<q-field
@@ -93,14 +73,10 @@
 			label="Оценка перспективности"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.perspective.label }}</div>
+				<p class="text-subtitle1">{{ projectObject.perspective.label }}</p>
 			</template>
 		</q-field>
 		<q-field
@@ -110,14 +86,10 @@
 			label="Стадия разработки"
 			stack-label
 			color="purple-10"
-			class="card-size"
+			class="card-task-size"
 		>
 			<template v-slot:control>
-				<div
-					color="purple-10"
-					class="self-center"
-					tabindex="0"
-				>{{ projectObject.status.label }}</div>
+				<p class="text-subtitle1">{{ projectObject.status.label }}</p>
 			</template>
 		</q-field>
 	</div>
@@ -145,7 +117,6 @@ onMounted(async () => {
 	try {
 		const { data } = await getProjectList()
 		items.value = data
-		console.log(data)
 	} catch (err) {
 		console.log(err)
 	}

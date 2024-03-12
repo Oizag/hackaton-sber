@@ -4,6 +4,18 @@
 		<q-form class=" loginSize flex column bg-main-dark rounded-24 q-pa-xl q-my-lg">
 			<h2 class="text-white text-center text-h3">Регистрация</h2>
 			<q-input
+				v-model="textRegistrationName"
+				autofocus
+				outlined
+				rounded
+				dark
+				label="Логин"
+				color="purple-10"
+				class="text-h6 q-mt-lg"
+				type="text"
+				:rules="[val => val && val.length > 0 || 'Пожалуйста, введите логин !']"
+			/>
+			<q-input
 				v-model="textRegistrationEmail"
 				autofocus
 				outlined
@@ -84,6 +96,7 @@ import { useAuthStore } from 'src/stores/auth'
 const authStore = useAuthStore()
 
 const rememberThePassword = ref<boolean>(true)
+const textRegistrationName = ref<string>('')
 const textRegistrationEmail = ref<string>('')
 const textRegistrationPassword = ref<string>('')
 const textRegistrationPasswordRepeat = ref<string>('')
