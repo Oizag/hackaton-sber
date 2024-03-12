@@ -1,19 +1,18 @@
 <template>
 	<q-page class="row items-start justify-evenly text-white">
 		<div class="page-size flex column q-mt-lg rounded-24 q-py-lg q-px-xl bg-main-dark">
-			<div class="flex row items-center justify-between q-mt-sm">
+			<div>
 				<q-btn
 					rounded
 					flat
-					class="absolute"
 					to="/"
+					class="btn-back absolute"
 				>
 					<q-img
 						class="arrow-size"
 						:src="ArrowLeft"
 					></q-img>
 				</q-btn>
-				<h3 class="q-mx-auto">{{ dataStore[0].name }}</h3>
 			</div>
 			<ProjectStatistic />
 			<q-separator class="bg-purple-10 q-mt-md"></q-separator>
@@ -28,7 +27,7 @@
 				<SearchField />
 			</div>
 
-			<ProjectList />
+			<TaskList />
 		</div>
 	</q-page>
 </template>
@@ -37,14 +36,11 @@
 	setup
 	lang="ts"
 >
-import { ref } from 'vue';
 import SearchField from '../components/SearchField.vue'
 import FilterField from '../components/FilterField.vue'
-import ProjectList from '../components/ProjectList.vue'
-import ArrowLeft from '../assets/images/arrow-left.svg'
+import TaskList from '../components/TaskList.vue'
 import ProjectStatistic from '../components/ProjectStatistic.vue'
 import { useDataStore } from 'src/stores/data'
-
-const dataStore = useDataStore()
+import ArrowLeft from '../assets/images/arrow-left.svg'
 
 </script>

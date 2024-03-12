@@ -6,3 +6,11 @@
 .card-size {
   min-width: 240px;
 }
+
+@media screen and (max-width: 470px) {
+  .btn-back {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}

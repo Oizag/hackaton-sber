@@ -78,7 +78,6 @@ class Project(models.Model):
 
 
     class Meta:
-        ordering = ["-id"]
         verbose_name = "Проект"
         verbose_name_plural = "Проекты"
 

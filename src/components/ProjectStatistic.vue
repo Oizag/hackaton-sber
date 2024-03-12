@@ -1,12 +1,11 @@
 <template>
+	<h3 class="q-mx-auto">{{ projectObject.name }}</h3>
 	<div class="flex row justify-center q-gutter-md q-my-md">
 		<q-field
-			v-for="item in items"
-			:key="item"
 			rounded
 			outlined
 			dark
-			:label="item.title"
+			label="Количество человек"
 			stack-label
 			color="purple-10"
 			class="card-size"
@@ -16,10 +15,111 @@
 					color="purple-10"
 					class="self-center"
 					tabindex="0"
-				>{{ item.description }}</div>
+				>{{ projectObject.job }}</div>
 			</template>
 		</q-field>
-
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Стоимость"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.cost }} руб.</div>
+			</template>
+		</q-field>
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Прогресс"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.progress }} %</div>
+			</template>
+		</q-field>
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Последнее изменение"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.lastModifyUser }}</div>
+			</template>
+		</q-field>
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Срок сдачи"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.lastModifyDate }}</div>
+			</template>
+		</q-field>
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Оценка перспективности"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.perspective.label }}</div>
+			</template>
+		</q-field>
+		<q-field
+			rounded
+			outlined
+			dark
+			label="Стадия разработки"
+			stack-label
+			color="purple-10"
+			class="card-size"
+		>
+			<template v-slot:control>
+				<div
+					color="purple-10"
+					class="self-center"
+					tabindex="0"
+				>{{ projectObject.status.label }}</div>
+			</template>
+		</q-field>
 	</div>
 </template>
 
@@ -27,18 +127,28 @@
 	setup
 	lang="ts"
 >
-import { useDataStore } from 'src/stores/data'
-import { ref } from 'vue';
+import { onMounted, ref } from 'vue';
+import { useProject } from 'composables'
+import { Project } from 'models'
+import { useProjectStore } from 'src/stores/data'
 
-const dataStore = useDataStore()
+// по хорошему ты должен был импортнуть этот компонент в родительский и через дефайн пропс передавать сюда айдишник
+// а потом в переменную obj(которая тут объявляется, а не в сторе) принимать данные из апи
+// где ретрив я тебе сейчас покажу
 
-const items = ref([
-	{ title: 'Количество человек', description: dataStore[0].amountOfPeople },
-	{ title: 'Стоимость', description: dataStore[0].price },
-	{ title: 'Прогресс', description: dataStore[0].progress },
-	{ title: 'Последнее изменение', description: dataStore[0].lastChange },
-	{ title: 'Срок сдачи', description: dataStore[0].dueDate },
-	{ title: 'Оценка перспективности', description: dataStore[0].condition },
-	{ title: 'Стадия разработки', description: dataStore[0].developmentStage },
-])
+const projectStore = useProjectStore()
+const projectObject = projectStore.projectObject
+
+const { getProjectList } = useProject()
+const items = ref<Project[]>()
+onMounted(async () => {
+	try {
+		const { data } = await getProjectList()
+		items.value = data
+		console.log(data)
+	} catch (err) {
+		console.log(err)
+	}
+})
+
 </script>

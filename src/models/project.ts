@@ -4,6 +4,7 @@ export interface Project {
 	slug?: string | undefined
 	cost?: number | undefined
 	perspective?: string | undefined
+	lastModifyUser?: string | undefined
 	progress?: number | string | undefined
 	startDate?: string | undefined
 	status?: string | undefined
